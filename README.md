@@ -49,9 +49,9 @@ No external dependencies are required to run the project. Simply open `index.htm
 
 Remember clone the repo
 
-     ```bash
+     
      git clone https://github.com/xguerrerov0903/Desempe-o-2-riwi.git
-     ```
+     
 
 
 ## 📸 Assets Attribution

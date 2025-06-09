@@ -25,15 +25,16 @@ header {
    Navigation menu
    ============================================ */
 
-/* Menu for mobil default not visible*/
+/* Menu check for mobil and tablet default not visible*/
 #menu-toggle {
   display: none;
 }
+/* Men icon collapse, default not visible*/
 .menu-icon{
     display: none;
 }
 
-/* Navigator style confi, the nav is fixed on the top*/
+/* Navigator style confi, the nav is fixed on the top to be always see*/
 nav {
     position: fixed;           
     display: flex;
@@ -47,10 +48,12 @@ nav {
     width: 100%;
     box-shadow: 2px 2px 1px #b094b8; 
     margin: 0;
+    /* To be over all the content */
+    z-index: 2
 
 }
 
-/* Style for the list of nav, the elements are on the center and wraps (change in mobile menu)*/
+/* Style for the list of nav, the elements are on the center and wraps (change in mobile and table menu)*/
 nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -62,15 +65,16 @@ nav ul {
 /* Style for the a (link) in nav, white color of the letters*/
 nav a {
     color: #fff;
+    /* Delet the default style for a items*/
     text-decoration: none;
     font-weight: bold;
+    /* Smooth change color*/
     transition: color 0.3s;
 }
-/* Change of color when a hover*/
+/* Change of color when hover*/
 nav a:hover {
     color: rgb(255, 211, 233);  
 }
-
 
 /* ============================================
    Main default
@@ -86,11 +90,13 @@ main{
 
 #presentation{
     display: flex;
+    /*Items in the center of horizontal of their sectin*/
     align-items: center;
     background-color: rgb(250, 228, 255);
     margin: 1rem;
 }
 .picture-pro{
+    /*Responsibe image*/
     max-width: 33%;
     padding: 1rem;
     margin: 1rem;
@@ -109,13 +115,13 @@ main{
    ============================================ */
 
 #projects{
+    /* Line spacing size*/
     line-height: 2;
     background-color: rgb(255, 228, 253);
     margin: 1rem;
 }
 .text-proj{
     text-align: center;
-
 }
 
 #projects h3{
@@ -132,40 +138,47 @@ main{
 }
 
 #projects ul, a{
+    /*Color for the elements of the list in projects section*/
     color: rgb(197, 77, 137);  
 }
 
-
+/*----------*/
 /* Galery*/
+/*----------*/
 
 .galery {
-  display: grid; /* Utiliza grid layout */
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-  gap: 20px; /* Espacio entre columnas y filas */
-  padding: 0 2rem; /* Espaciado horizontal interno */
+    /* GRID */
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* 3 equals columns */
+    gap: 20px; 
+    padding: 0 2rem; /* internal horizontal space */
 }
 
+/* Pictures format*/
 .galery img{
+    /*Responsibe*/
     width: 100%;
     height: 20em;
+    /* Size the image to cover the entire frame*/
     object-fit: cover;
-    object-position: center center; /* Centra la imagen */
+    object-position: center center; /* Center picture */
     border: 0.5rem solid #ffffff;
+    /* Round edges*/
     border-radius: 8px;
     box-shadow: 2px 2px 1px #b094b8; 
+    /* Smooth transition */
     transition: transform 0.6s, box-shadow 0.6s;
 }
 
 .galery img:hover{
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-    box-shadow: 4px 4px 1px #b094b8; /* Sombra más pronunciada */
+    transform: scale(1.05); /* Scale a little bit the size */
+    box-shadow: 4px 4px 1px #b094b8; /* Shadow more deeper */
 }
 
 /* ============================================
    Contact seccion
    ============================================ */
 #contact{
-
     line-height: 2;
     background-color: rgb(255, 228, 243);
     padding-left: 2rem;
@@ -175,6 +188,7 @@ main{
 }
 
 #contact ul{
+    /*Just to change th dots*/
     list-style-type: circle;
 }
 
@@ -196,7 +210,8 @@ footer{
     /* ============================================
    Navigation menu collapsed mobil and tablet
    ============================================ */
-    .menu-icon {
+   /* The icon is fixed on the top  right to be always see*/ 
+   .menu-icon {
         display: flex; 
         position: fixed; 
         top: 1rem; 
@@ -206,7 +221,7 @@ footer{
         color: #fffaf3;
         padding: 0.5rem; 
         border-radius: 6px; 
-        box-shadow: 2px 2px 1px #b094b8; /* Sombra suave inferior */
+        box-shadow: 2px 2px 1px #b094b8;
     }
 
     .responsive-nav {
@@ -214,24 +229,25 @@ footer{
         top: 60px; 
         left: 0; 
         width: 100%;
-        background-color:rgb(255, 164, 210)7; /* Mismo fondo marrón que el icono (consistencia visual) */
-        display: none; /* Oculto por defecto, solo se muestra si se activa */
-        flex-direction: column; /* Los elementos (enlaces del menú) se apilan en columna */
-        align-items: center; /* Centra horizontalmente cada ítem del menú */
-        padding: 0.5rem 0; /* Espacio vertical arriba y abajo */
-        z-index: 3; /* Un poco por debajo del icono, pero encima del contenido de fondo */
+        background-color:rgb(255, 164, 210)7; 
+        display: none; /* Hide in default, only show if menu icon is touch */
+        flex-direction: column; /* The elements are now show in columns */
+        align-items: center;
+        padding: 0.5rem 0; 
+        z-index: 3; /* Under the button (collapse menu) over the content*/
     }
 
-    /* Asegura que la lista del menú (<ul>) también esté en columna */
+    /* To ensure the list items be in columns */
     nav ul {
-        flex-direction: column; /* Los <li> se apilan verticalmente */
+        flex-direction: column;
     }
 
-    /* Cuando el checkbox con id "menu-toggle" está marcado (checked)... */
+    /* When the menu icon is touch the responsive nav change for none th flex to be display*/
     #menu-toggle:checked ~ .responsive-nav {
-        display: flex; /* ...muestra el menú cambiando su display de "none" a "flex" */
+        display: flex; 
     }
 
+    /* Change to tables devices, for 3 columns to 2*/
     .galery {
         grid-template-columns: repeat(2, 1fr); 
     }
@@ -244,29 +260,23 @@ footer{
    Presentation section
    ============================================ */
 
+   /* On mobil divices the default flex-direction of row is change the colums*/
    #presentation{
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: rgb(250, 228, 255);
-    }
-    .picture-pro{
-        max-width: 80%;
-        padding: 1rem;
-        margin: 1rem;
-        background-color: #fff;
+
     }
 
-    .text-info{
-        background-color: #fff;
-        padding: 0.5rem;
-        margin: 0.5rem;
+    /* The picture now take a 80% of the screen*/
+    .picture-pro{
+        max-width: 80%;
     }
+
 
     /* ============================================
     Galeri section
    ============================================ */
 
+    /* Change to tables devices, for 3 columns to 1*/
     .galery {
         grid-template-columns: 1fr;
     }

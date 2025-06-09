@@ -96,7 +96,7 @@ main{
     margin: 1rem;
 }
 .picture-pro{
-    /*Responsibe image*/
+    /*Responsive image*/
     max-width: 33%;
     padding: 1rem;
     margin: 1rem;
@@ -156,7 +156,7 @@ main{
 
 /* Pictures format*/
 .galery img{
-    /*Responsibe*/
+    /*Responsive*/
     width: 100%;
     height: 20em;
     /* Size the image to cover the entire frame*/
@@ -205,7 +205,7 @@ footer{
 
 }
 
-/* Responsibe tablet  */
+/* Responsive tablet  */
 @media (max-width: 786px) {
     /* ============================================
    Navigation menu collapsed mobil and tablet
@@ -229,7 +229,7 @@ footer{
         top: 60px; 
         left: 0; 
         width: 100%;
-        background-color:rgb(255, 164, 210)7; 
+        background-color:rgb(255, 164, 210); 
         display: none; /* Hide in default, only show if menu icon is touch */
         flex-direction: column; /* The elements are now show in columns */
         align-items: center;
@@ -253,7 +253,7 @@ footer{
     }
 }
 
-/* Responsibe mobil */
+/* Responsive mobil */
 @media (max-width: 480px) {
 
     /* ============================================

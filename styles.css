@@ -1,0 +1,131 @@
+/*Smooth scroll*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global config */
+* {
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    box-sizing: border-box; 
+    margin: 0;               /* Delet margin default*/
+    padding: 0;              /* Delet padding default */
+}
+
+/*Style for the header*/
+header {
+    text-align: center;
+    background-color: rgb(255, 164, 210); 
+    color: #ffffff;
+    padding: 1%;
+    padding-top: 2%;
+    box-shadow: #d6c7ff;
+}
+
+/* ============================================
+   Navigation menu
+   ============================================ */
+/* Menu for mobil default not visible*/
+#menu-toggle {
+  display: none;
+}
+.menu-icon{
+    display: none;
+}
+
+/* Navigator style confi, the nav is fixed on the top*/
+nav {
+    position: fixed;           
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: rgb(255, 164, 210);  
+    padding: 0.5rem;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 2px 2px 1px #b094b8; 
+    margin: 0;
+
+}
+
+/* Style for the list of nav, the elements are on the center and wraps (change in mobile menu)*/
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+/* Style for the a (link) in nav, white color of the letters*/
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+/* Change of color when a hover*/
+nav a:hover {
+    color: rgb(255, 211, 233);  
+}
+
+/* ============================================
+   About me seccion
+   ============================================ */
+
+#aboutme{
+    background-color: pink;
+}
+
+.picture-pro{
+    max-width: 33%;
+    float:left; 
+    padding: 1rem;
+    margin: 1rem;
+    border: 30px #d6c7ff;
+
+}
+
+
+
+/* Mobil view */
+@media (max-width: 480px) {
+
+    .menu-icon {
+        display: flex; 
+        position: fixed; 
+        top: 1rem; 
+        right: 1rem; 
+        z-index: 4; 
+        background-color: rgb(255, 164, 210);  
+        color: #fffaf3;
+        padding: 0.5rem; 
+        border-radius: 6px; 
+        box-shadow: 2px 2px 1px #b094b8; /* Sombra suave inferior */
+    }
+
+    
+    .responsive-nav {
+        position: fixed; 
+        top: 60px; 
+        left: 0; 
+        width: 100%;
+        background-color:rgb(255, 164, 210)7; /* Mismo fondo marrón que el icono (consistencia visual) */
+        display: none; /* Oculto por defecto, solo se muestra si se activa */
+        flex-direction: column; /* Los elementos (enlaces del menú) se apilan en columna */
+        align-items: center; /* Centra horizontalmente cada ítem del menú */
+        padding: 0.5rem 0; /* Espacio vertical arriba y abajo */
+        z-index: 3; /* Un poco por debajo del icono, pero encima del contenido de fondo */
+    }
+
+    /* Asegura que la lista del menú (<ul>) también esté en columna */
+    nav ul {
+        flex-direction: column; /* Los <li> se apilan verticalmente */
+    }
+
+    /* Cuando el checkbox con id "menu-toggle" está marcado (checked)... */
+    #menu-toggle:checked ~ .responsive-nav {
+        display: flex; /* ...muestra el menú cambiando su display de "none" a "flex" */
+    }
+}

@@ -1,4 +1,4 @@
-/*Smooth scroll*/
+/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
@@ -29,7 +29,7 @@ header {
 #menu-toggle {
   display: none;
 }
-/* Men icon collapse, default not visible*/
+/* Menu icon collapse, default not visible*/
 .menu-icon{
     display: none;
 }
@@ -141,6 +141,12 @@ main{
     /*Color for the elements of the list in projects section*/
     color: rgb(197, 77, 137);  
 }
+
+/* Change color when hover*/
+#projects a:hover{
+    color: rgb(255, 50, 153);
+}
+
 
 /*----------*/
 /* Galery*/

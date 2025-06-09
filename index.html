@@ -29,51 +29,54 @@
     <nav class="responsive-nav">
         <!-- Nabvigation for sections -->
         <ul>
-            <li><a href="#aboutme"><i class="fa-solid fa-book-open"></i> Presentation and about me</a></li>
+            <li><a href="#presentation"><i class="fa-solid fa-location-pin"></i> Presentation</a></li>
             <li><a href="#projects"><i class="fa-solid fa-circle-info"></i> Projects</a></li>
             <li><a href="#contact"><i class="fa-solid fa-bookmark"></i> Contact</a></li>
         </ul>
     </nav>
 
     <main>
-        <section id="#aboutme">
+        <!--Presentation-->
+        <section id="presentation">
             <img src="assets/profile.png" alt="Ximena profile picture" title="Ximena profile picture" class="picture-pro">
-            <h2 h2>I'm Ximena!</h2>
-            <div class="box aboutme">I am studing in Riwi to be software developer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus non nisi et blandit. Ut sit amet quam dignissim ex tempor imperdiet. Nam tincidunt vestibulum porttitor. Phasellus luctus aliquet elit eu varius. Morbi maximus in odio in iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut nec luctus nisi. Donec cursus pellentesque orci, nec faucibus dui. Donec egestas diam aliquam gravida volutpat. Maecenas est elit, rutrum at suscipit nec, scelerisque eget felis. Aenean sed finibus neque. Pellentesque blandit, arcu quis facilisis tincidunt, ex odio finibus sapien, eu dignissim dui lacus vitae sem. Curabitur sed bibendum dolor. Sed scelerisque ac odio nec imperdiet.</div>
+            <div class="text-info">
+                <h2 h2>I'm Ximena!</h2><br>
+                <p>I am studing in Riwi to be software developer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus non nisi et blandit. Ut sit amet quam dignissim ex tempor imperdiet. Nam tincidunt vestibulum porttitor. Phasellus luctus aliquet elit eu varius. Morbi maximus in odio in iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut nec luctus nisi. Donec cursus pellentesque orci, nec faucibus dui. Donec egestas diam aliquam gravida volutpat. Maecenas est elit, rutrum at suscipit nec,
+                     scelerisque eget felis. Aenean sed finibus neque. Pellentesque blandit, arcu quis facilisis tincidunt, ex odio finibus sapien, eu dignissim dui lacus vitae sem. Curabitur sed bibendum dolor. Sed scelerisque ac odio nec imperdiet.</p>
+            </div>
         </section>
+        
 
         <section id="projects">
-            <h2>CSS Selectors and Specificity</h2>
-            <div class="box highlight" id="special">This box is special!</div>
+            <div class="text-proj">
+            <h2>My projects</h2>
+            <h3> To see more informationa about my projects and their repositories click in the button</h3>
+            <button><a href="projects.html" target="_blank">Projecs</a></button> 
+            </div>
+            <br>
+            <hr>
+            <ul>
+                <li>Random matriz (1,0) for nonograms</li>
+                <li>Product inventory system</li>
+                <li>Book inventory system</li>
+                <li>Short page profile</li>
+                <li>Web page for a cafetiria</li>
+                <li>Web page about me with CSS</li>
+            </ul>    
         </section>
 
         <!-- Seccion para mostrar efectos visuales (borde, sombra y rotación) -->
-        <section class="visual-effects">
-            <h2>Visual Customization</h2>
-            <!--Clase box-->
-            <div class="box">This box has a shadow and border!</div>
-            <!--Clase rotate-box-->
-            <div class="rotate-box">Rotated Box</div>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you want contact me this is my basic information</p>
+            <ul>
+                <li>WhatsApp: +57 350 4739827</li>
+                <li>Email: xguerrerov0903@gmail.com</li>
+                <li>Adress: Carrera 77 b # 60 81</li>
+            </ul>
         </section>
 
-    <!--Seccion interactiva al pasar el mouse por encima (hover) habra un cambio de color-->
-    <section class="interactivity">
-      <h2>Interactive Elements</h2>
-      <a href="#">Hover over me!</a>     
-    </section>
 
-      <!--Seccion con animacion con keyframe-->
-    <section class="animation">
-      <!-- Se le aplica la clase box. Fade-in se encarga la animación -->
-      <h2 class="box fade-in"> Hello I am here, fade in</h2>
-      <!-- La inacion es de aparicion de la caja al iniciar la pagina en caso de no verla se recomienda reiniciarla por eso mismo-->
-      <h6>If you don't see the animation reload the page</h6>
-    </section>
-
-    <!-- Caja con posicion fija (siempre visible aunque se haga scroll) -->
-    <section class="fixed-box">
-      <h2>This is a fixe-box be there forever</h2>
-    </section>
   </main>
 
   <!--Pie de pagina-->

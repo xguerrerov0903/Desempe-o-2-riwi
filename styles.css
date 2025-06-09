@@ -24,6 +24,7 @@ header {
 /* ============================================
    Navigation menu
    ============================================ */
+
 /* Menu for mobil default not visible*/
 #menu-toggle {
   display: none;
@@ -70,28 +71,98 @@ nav a:hover {
     color: rgb(255, 211, 233);  
 }
 
+
 /* ============================================
-   About me seccion
+   Main default
    ============================================ */
 
-#aboutme{
-    background-color: pink;
+main{
+    padding: 1rem;
 }
 
+/* ============================================
+   Presentation section
+   ============================================ */
+
+#presentation{
+    display: flex;
+    align-items: center;
+    background-color: rgb(250, 228, 255);
+    margin: 1rem;
+}
 .picture-pro{
     max-width: 33%;
-    float:left; 
     padding: 1rem;
     margin: 1rem;
-    border: 30px #d6c7ff;
+    background-color: #fff;
+}
+
+.text-info{
+    background-color: #fff;
+    padding: 0.5rem;
+    margin: 0.5rem;
 
 }
+
+/* ============================================
+   Projects seccion
+   ============================================ */
+
+#projects{
+    line-height: 2;
+    padding-left: 2rem;
+    background-color: rgb(255, 228, 253);
+    margin: 1rem;
+}
+.text-proj{
+    text-align: center;
+
+}
+
+
+#projects h3{
+    text-decoration: underline;
+}
+
+button {
+    background-color: rgb(255, 164, 210);  
+    box-shadow: 2px 2px 1px #b094b8; 
+    padding: 0.7rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    color: rgb(255, 211, 233); 
+}
+
+#projects button a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ============================================
+   Contact seccion
+   ============================================ */
+#contact{
+    background-color: rgb(255, 228, 243);
+    margin: 1rem;
+
+}
+
+#contact ul{
+    list-style-type: circle
+}
+
 
 
 
 /* Mobil view */
 @media (max-width: 480px) {
-
+    /* ============================================
+   Navigation menu
+   ============================================ */
     .menu-icon {
         display: flex; 
         position: fixed; 
@@ -105,7 +176,6 @@ nav a:hover {
         box-shadow: 2px 2px 1px #b094b8; /* Sombra suave inferior */
     }
 
-    
     .responsive-nav {
         position: fixed; 
         top: 60px; 
@@ -128,4 +198,28 @@ nav a:hover {
     #menu-toggle:checked ~ .responsive-nav {
         display: flex; /* ...muestra el menú cambiando su display de "none" a "flex" */
     }
+
+    /* ============================================
+   Presentation section
+   ============================================ */
+
+   #presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(250, 228, 255);
+    }
+    .picture-pro{
+        max-width: 80%;
+        padding: 1rem;
+        margin: 1rem;
+        background-color: #fff;
+    }
+
+    .text-info{
+        background-color: #fff;
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+
 }
